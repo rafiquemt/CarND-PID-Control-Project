@@ -35,9 +35,15 @@ int main(int argc, char** argv)
 
   PID pid;
   // TODO: Initialize the pid variable.
-  double Kp = atof(argv[1]);
-  double Ki = atof(argv[2]);
-  double Kd = atof(argv[3]);
+  
+  double Kp = 0.18;
+  double Ki = 0.0005;
+  double Kd = 5;
+  
+  // - Only use below for command line param tuning
+  // Kp = atof(argv[1]);
+  // Ki = atof(argv[2]);
+  // Kd = atof(argv[3]);
 
   cout << "init " << Kp << " " << Ki << " " << Kd << endl;
   pid.Init(Kp, Ki, Kd);
